@@ -1,0 +1,9 @@
+<x-app-layout>
+    <div>
+        <livewire:banner/>
+        <livewire:breadcrumb/>
+        <livewire:single-videos-list/>
+        <livewire:sections.latest-video/>
+        <livewire:footer/>
+    </div>
+</x-app-layout>

@@ -1,0 +1,10 @@
+<x-app-layout>
+    <div>
+        <livewire:banner/>
+        <livewire:breadcrumb/>
+        <livewire:blog-content/>
+        <livewire:share-blog/>
+        <livewire:sections.latest-gallery/>
+        <livewire:footer/>
+    </div>
+</x-app-layout>

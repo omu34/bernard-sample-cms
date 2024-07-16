@@ -1,0 +1,10 @@
+<x-app-layout>
+    <div>
+        <livewire:basic-banner/>
+        <livewire:sections.featured-items/>
+        <livewire:sections.latest-video/>
+        <livewire:sections.latest-news/>
+        <livewire:sections.latest-gallery/>
+        <livewire:footer/>
+    </div>
+</x-app-layout>
