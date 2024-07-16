@@ -1,14 +1,7 @@
 {
     "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
-    },
-
-
-
     "builds": [{
-        "src": "public/index.php",
+        "src": "api/index.php",
         "use": "@vercel/php",
         "config": {
             "buildCommand": "composer install && npm install && npm run build"
@@ -22,6 +15,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://bernard-sample-cms.com",
+        "APP_KEY": "base64:YOUR_APP_KEY",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
