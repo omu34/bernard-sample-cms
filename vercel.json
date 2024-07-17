@@ -1,8 +1,16 @@
 {
     "version": 2,
-    "framework": null,
+    "builds": [{
+        "src": "api/index.php",
+        "use": "@vercel/php",
+        "config": {
+            "buildCommand": "composer install && npm install && npm run build"
+        }
+    }],
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": {
+            "runtime": "vercel-php@0.6.0"
+        }
     },
     "routes": [{
         "src": "/(.*)",
@@ -10,16 +18,15 @@
     }],
     "env": {
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
+        "APP_DEBUG": "false",
         "APP_URL": "https://bernard-sample-cms.com",
-
+        "APP_KEY": "base64:YOUR_APP_KEY",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
