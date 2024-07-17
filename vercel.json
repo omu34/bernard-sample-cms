@@ -2,9 +2,7 @@
     "version": 2,
     "builds": [{
         "src": "api/index.php",
-        "config": {
-            "buildCommand": "composer install && npm install && npm run build"
-        }
+        "use": "vercel-php@0.6.0"
     }],
     "routes": [{
         "src": "/(.*)",
